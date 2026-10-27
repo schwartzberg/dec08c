@@ -1,0 +1,50 @@
+{
+  "symbol": "MSFT",
+  "company": "Microsoft",
+  "provider": "Yahoo Finance",
+  "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/MSFT?period1=1451606400&period2=1791676800&interval=1d&events=history&includeAdjustedClose=true",
+  "source_page": "https://finance.yahoo.com/quote/MSFT/history/",
+  "retrieved_utc": "2026-10-27T13:39:40.163945+00:00",
+  "raw_sha256": "5a682a7a774760cdddcee3ad2d510bbe16352c3920cfa0578781f516eaf51b57",
+  "source_field": "chart.result[0].indicators.quote[0].open",
+  "price_handling": "Open field used directly; no dividend adjustment is applied.",
+  "currency": "USD",
+  "exchange_timezone": "America/New_York",
+  "requested_development": [
+    "2016-01-01",
+    "2026-09-06"
+  ],
+  "requested_test": [
+    "2026-09-09",
+    "2026-10-10"
+  ],
+  "gap_context_only": [
+    {
+      "Date": "2026-09-08",
+      "Open": "493.01000977"
+    }
+  ],
+  "files": {
+    "all": {
+      "filename": "MSFT_all.csv",
+      "rows": 2708,
+      "first_date": "2016-01-04",
+      "last_date": "2026-10-09",
+      "sha256": "ba6c8d2c4f33d1aa7b9e0d1e8d75231e3a868067752e1c95d5b9bccc2712ff68"
+    },
+    "development": {
+      "filename": "MSFT_development.csv",
+      "rows": 2684,
+      "first_date": "2016-01-04",
+      "last_date": "2026-09-04",
+      "sha256": "694bf16d174118e12d58ee77eff27c595556ad7cbd564db12e282fd916b96f37"
+    },
+    "test": {
+      "filename": "MSFT_test.csv",
+      "rows": 23,
+      "first_date": "2026-09-09",
+      "last_date": "2026-10-09",
+      "sha256": "499eb5077c8078e9469129249beb857e2bfa8608d4f1f5aee0f2f0f3137a468c"
+    }
+  }
+}

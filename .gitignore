@@ -1,0 +1,7 @@
+.venv/
+tmp/
+__pycache__/
+.ipynb_checkpoints/
+*.log
+data/nmt/*.zip
+outputs/failed_execution.ipynb
