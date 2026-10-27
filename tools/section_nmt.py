@@ -18,7 +18,10 @@ def make_cells():
 
         I compare vocabulary budgets of **1,000** and **3,000** tokens in the supplied `3_NMT.ipynb` model.<br>
         Each language has its own vocabulary, and each budget includes the four reserved tokens.<br>
-        All other settings remain unchanged: the full corpus, seed 42, a 50-token limit, batches of 64, 128-dimensional embeddings, one 512-unit LSTM in the encoder and decoder, Adam at 0.001, gradient clipping at 1.0 and 10 epochs.<br>
+        All other settings remain unchanged.<br>
+        Both runs use the full filtered corpus, seed 42, a 50-token limit and batches of 64.<br>
+        Embeddings have 128 values, and the encoder and decoder each have one 512-unit LSTM.<br>
+        Adam uses a learning rate of 0.001, the gradient norm is clipped at 1.0, and each model trains for 10 epochs.<br>
         `QUICK_RUN` remains false.<br>
         Each model is restored to its lowest validation-loss epoch.
 
