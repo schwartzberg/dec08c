@@ -1,0 +1,492 @@
+{
+  "vocabulary_budget": 1000,
+  "model_config": {
+    "source_size": 1000,
+    "target_size": 1000,
+    "embed_dim": 128,
+    "hidden_dim": 512
+  },
+  "parameters": 3398632,
+  "settings": {
+    "QUICK_RUN": false,
+    "MAX_PAIRS": null,
+    "MAX_WORDS": 50,
+    "BATCH_SIZE": 64,
+    "EMBED_DIM": 128,
+    "HIDDEN_DIM": 512,
+    "EPOCHS": 10,
+    "LEARNING_RATE": 0.001,
+    "CLIP_NORM": 1.0,
+    "SEED": 42,
+    "vocabulary_budgets": [
+      1000,
+      3000
+    ],
+    "checkpoint_selection": "minimum validation token cross-entropy"
+  },
+  "coverage": {
+    "train": {
+      "english": {
+        "unknown_tokens": 75403,
+        "content_tokens": 704578,
+        "unknown_rate": 0.10701866933114573,
+        "unknown_words": 75300,
+        "words": 601109,
+        "word_unknown_rate": 0.12526846212583742
+      },
+      "spanish": {
+        "unknown_tokens": 116707,
+        "content_tokens": 695501,
+        "unknown_rate": 0.16780277814122482,
+        "unknown_words": 116452,
+        "words": 578794,
+        "word_unknown_rate": 0.2011976627262895
+      }
+    },
+    "validation": {
+      "english": {
+        "unknown_tokens": 9477,
+        "content_tokens": 87969,
+        "unknown_rate": 0.10773113255806023,
+        "unknown_words": 9462,
+        "words": 74988,
+        "word_unknown_rate": 0.12618018883021284
+      },
+      "spanish": {
+        "unknown_tokens": 14769,
+        "content_tokens": 87043,
+        "unknown_rate": 0.16967475845271876,
+        "unknown_words": 14746,
+        "words": 72407,
+        "word_unknown_rate": 0.20365434281215905
+      }
+    },
+    "test": {
+      "english": {
+        "unknown_tokens": 9425,
+        "content_tokens": 88539,
+        "unknown_rate": 0.10645026485503563,
+        "unknown_words": 9415,
+        "words": 75559,
+        "word_unknown_rate": 0.12460461361320292
+      },
+      "spanish": {
+        "unknown_tokens": 14758,
+        "content_tokens": 87359,
+        "unknown_rate": 0.16893508396387322,
+        "unknown_words": 14732,
+        "words": 72740,
+        "word_unknown_rate": 0.2025295573274677
+      }
+    }
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train": {
+        "loss": 2.2448811929299204,
+        "accuracy": 0.5467349357510843,
+        "accuracy_unk_as_error": 0.43158524507429197,
+        "correct_tokens": 432247,
+        "resolved_correct_tokens": 341210,
+        "tokens": 790597,
+        "unknown_targets": 116707
+      },
+      "valid": {
+        "loss": 1.5473655636410426,
+        "accuracy": 0.6435685569405443,
+        "accuracy_unk_as_error": 0.5276470231721853,
+        "correct_tokens": 63712,
+        "resolved_correct_tokens": 52236,
+        "tokens": 98998,
+        "unknown_targets": 14769
+      },
+      "seconds": 15.995136653999907
+    },
+    {
+      "epoch": 2,
+      "train": {
+        "loss": 1.2911274737378668,
+        "accuracy": 0.6882646911131715,
+        "accuracy_unk_as_error": 0.5736968392240295,
+        "correct_tokens": 544140,
+        "resolved_correct_tokens": 453563,
+        "tokens": 790597,
+        "unknown_targets": 116707
+      },
+      "valid": {
+        "loss": 1.2298826372824057,
+        "accuracy": 0.7003171781248106,
+        "accuracy_unk_as_error": 0.5895371623669166,
+        "correct_tokens": 69330,
+        "resolved_correct_tokens": 58363,
+        "tokens": 98998,
+        "unknown_targets": 14769
+      },
+      "seconds": 15.694319080000014
+    },
+    {
+      "epoch": 3,
+      "train": {
+        "loss": 1.0119713101657053,
+        "accuracy": 0.7431055265830758,
+        "accuracy_unk_as_error": 0.6259914975644987,
+        "correct_tokens": 587497,
+        "resolved_correct_tokens": 494907,
+        "tokens": 790597,
+        "unknown_targets": 116707
+      },
+      "valid": {
+        "loss": 1.1433569681317148,
+        "accuracy": 0.7168528657144588,
+        "accuracy_unk_as_error": 0.6051132346108002,
+        "correct_tokens": 70967,
+        "resolved_correct_tokens": 59905,
+        "tokens": 98998,
+        "unknown_targets": 14769
+      },
+      "seconds": 15.78618812500008
+    },
+    {
+      "epoch": 4,
+      "train": {
+        "loss": 0.842278760774307,
+        "accuracy": 0.7793136073119428,
+        "accuracy_unk_as_error": 0.6591512489928497,
+        "correct_tokens": 616123,
+        "resolved_correct_tokens": 521123,
+        "tokens": 790597,
+        "unknown_targets": 116707
+      },
+      "valid": {
+        "loss": 1.1142818623787105,
+        "accuracy": 0.7231358209256753,
+        "accuracy_unk_as_error": 0.6077395502939453,
+        "correct_tokens": 71589,
+        "resolved_correct_tokens": 60165,
+        "tokens": 98998,
+        "unknown_targets": 14769
+      },
+      "seconds": 15.814644579999822
+    },
+    {
+      "epoch": 5,
+      "train": {
+        "loss": 0.7117407638802272,
+        "accuracy": 0.8079754919383706,
+        "accuracy_unk_as_error": 0.6847230637100824,
+        "correct_tokens": 638783,
+        "resolved_correct_tokens": 541340,
+        "tokens": 790597,
+        "unknown_targets": 116707
+      },
+      "valid": {
+        "loss": 1.1219530874903645,
+        "accuracy": 0.7237721974181297,
+        "accuracy_unk_as_error": 0.6130022828744015,
+        "correct_tokens": 71652,
+        "resolved_correct_tokens": 60686,
+        "tokens": 98998,
+        "unknown_targets": 14769
+      },
+      "seconds": 16.014603019999868
+    },
+    {
+      "epoch": 6,
+      "train": {
+        "loss": 0.6004391150255447,
+        "accuracy": 0.8342417185999947,
+        "accuracy_unk_as_error": 0.7078789825916364,
+        "correct_tokens": 659549,
+        "resolved_correct_tokens": 559647,
+        "tokens": 790597,
+        "unknown_targets": 116707
+      },
+      "valid": {
+        "loss": 1.1475279508314917,
+        "accuracy": 0.7231358209256753,
+        "accuracy_unk_as_error": 0.611668922604497,
+        "correct_tokens": 71589,
+        "resolved_correct_tokens": 60554,
+        "tokens": 98998,
+        "unknown_targets": 14769
+      },
+      "seconds": 16.111780584000144
+    },
+    {
+      "epoch": 7,
+      "train": {
+        "loss": 0.5084661361209917,
+        "accuracy": 0.8569384907860769,
+        "accuracy_unk_as_error": 0.7277449825891067,
+        "correct_tokens": 677493,
+        "resolved_correct_tokens": 575353,
+        "tokens": 790597,
+        "unknown_targets": 116707
+      },
+      "valid": {
+        "loss": 1.1848805348808933,
+        "accuracy": 0.7213277035899716,
+        "accuracy_unk_as_error": 0.6123154003111174,
+        "correct_tokens": 71410,
+        "resolved_correct_tokens": 60618,
+        "tokens": 98998,
+        "unknown_targets": 14769
+      },
+      "seconds": 16.063078196999868
+    },
+    {
+      "epoch": 8,
+      "train": {
+        "loss": 0.43090079978567375,
+        "accuracy": 0.877201658999465,
+        "accuracy_unk_as_error": 0.7455100386163873,
+        "correct_tokens": 693513,
+        "resolved_correct_tokens": 589398,
+        "tokens": 790597,
+        "unknown_targets": 116707
+      },
+      "valid": {
+        "loss": 1.2317348552589722,
+        "accuracy": 0.7171963069961009,
+        "accuracy_unk_as_error": 0.6076688417947838,
+        "correct_tokens": 71001,
+        "resolved_correct_tokens": 60158,
+        "tokens": 98998,
+        "unknown_targets": 14769
+      },
+      "seconds": 16.209104430000025
+    },
+    {
+      "epoch": 9,
+      "train": {
+        "loss": 0.36921963305529765,
+        "accuracy": 0.8927860844399865,
+        "accuracy_unk_as_error": 0.759165541989155,
+        "correct_tokens": 705834,
+        "resolved_correct_tokens": 600194,
+        "tokens": 790597,
+        "unknown_targets": 116707
+      },
+      "valid": {
+        "loss": 1.2784085612544729,
+        "accuracy": 0.7180044041293764,
+        "accuracy_unk_as_error": 0.6109113315420514,
+        "correct_tokens": 71081,
+        "resolved_correct_tokens": 60479,
+        "tokens": 98998,
+        "unknown_targets": 14769
+      },
+      "seconds": 16.37246944599997
+    },
+    {
+      "epoch": 10,
+      "train": {
+        "loss": 0.3193461506017849,
+        "accuracy": 0.9067147990695639,
+        "accuracy_unk_as_error": 0.771497994553483,
+        "correct_tokens": 716846,
+        "resolved_correct_tokens": 609944,
+        "tokens": 790597,
+        "unknown_targets": 116707
+      },
+      "valid": {
+        "loss": 1.3353336552865178,
+        "accuracy": 0.7143073597446413,
+        "accuracy_unk_as_error": 0.6046687811874988,
+        "correct_tokens": 70715,
+        "resolved_correct_tokens": 59861,
+        "tokens": 98998,
+        "unknown_targets": 14769
+      },
+      "seconds": 16.471297311999933
+    }
+  ],
+  "best_epoch": 4,
+  "validation_metrics": {
+    "loss": 1.1142818623787105,
+    "accuracy": 0.7231358209256753,
+    "accuracy_unk_as_error": 0.6077395502939453,
+    "correct_tokens": 71589,
+    "resolved_correct_tokens": 60165,
+    "tokens": 98998,
+    "unknown_targets": 14769
+  },
+  "test_metrics": {
+    "loss": 1.1224444728242153,
+    "accuracy": 0.7233247370753919,
+    "accuracy_unk_as_error": 0.6076177620179716,
+    "correct_tokens": 71803,
+    "resolved_correct_tokens": 60317,
+    "tokens": 99268,
+    "unknown_targets": 14758
+  },
+  "translations": [
+    {
+      "test_index": 2937,
+      "english": "hi.",
+      "reference": "hola.",
+      "source_tokens": [
+        "hi",
+        "."
+      ],
+      "target_tokens": [
+        "hola",
+        "."
+      ],
+      "translation": "<unk>.",
+      "ended_with_eos": true,
+      "unknown_source_tokens": [
+        "hi"
+      ]
+    },
+    {
+      "test_index": 197,
+      "english": "i am a good boy.",
+      "reference": "soy un buen tipo.",
+      "source_tokens": [
+        "i",
+        "am",
+        "a",
+        "good",
+        "boy",
+        "."
+      ],
+      "target_tokens": [
+        "soy",
+        "un",
+        "buen",
+        "tipo",
+        "."
+      ],
+      "translation": "soy un buen <unk>.",
+      "ended_with_eos": true,
+      "unknown_source_tokens": []
+    },
+    {
+      "test_index": 6351,
+      "english": "may i turn on the radio?",
+      "reference": "¿te importa que encienda la radio?",
+      "source_tokens": [
+        "may",
+        "i",
+        "turn",
+        "on",
+        "the",
+        "radio",
+        "?"
+      ],
+      "target_tokens": [
+        "¿",
+        "te",
+        "importa",
+        "que",
+        "encienda",
+        "la",
+        "radio",
+        "?"
+      ],
+      "translation": "¿puedo <unk> la radio?",
+      "ended_with_eos": true,
+      "unknown_source_tokens": []
+    },
+    {
+      "test_index": 3146,
+      "english": "tom is looking forward to seeing mary again.",
+      "reference": "tom está deseando volver a ver a mary.",
+      "source_tokens": [
+        "tom",
+        "is",
+        "looking",
+        "forward",
+        "to",
+        "seeing",
+        "mary",
+        "again",
+        "."
+      ],
+      "target_tokens": [
+        "tom",
+        "está",
+        "deseando",
+        "volver",
+        "a",
+        "ver",
+        "a",
+        "mary",
+        "."
+      ],
+      "translation": "tom está <unk> a ver a mary.",
+      "ended_with_eos": true,
+      "unknown_source_tokens": []
+    },
+    {
+      "test_index": 10760,
+      "english": "even now, i occasionally think i'd like to see you. not the you that you are today, but the you i remember from the past.",
+      "reference": "incluso ahora, a veces pienso que me gustaría verte. no como eres hoy, sino como te recuerdo.",
+      "source_tokens": [
+        "even",
+        "now",
+        ",",
+        "i",
+        "occasionally",
+        "think",
+        "i'd",
+        "like",
+        "to",
+        "see",
+        "you",
+        ".",
+        "not",
+        "the",
+        "you",
+        "that",
+        "you",
+        "are",
+        "today",
+        ",",
+        "but",
+        "the",
+        "you",
+        "i",
+        "remember",
+        "from",
+        "the",
+        "past",
+        "."
+      ],
+      "target_tokens": [
+        "incluso",
+        "ahora",
+        ",",
+        "a",
+        "veces",
+        "pienso",
+        "que",
+        "me",
+        "gustaría",
+        "verte",
+        ".",
+        "no",
+        "como",
+        "eres",
+        "hoy",
+        ",",
+        "sino",
+        "como",
+        "te",
+        "recuerdo",
+        "."
+      ],
+      "translation": "si yo te <unk>., te <unk>, te <unk>, te <unk> la verdad. no te <unk>.",
+      "ended_with_eos": true,
+      "unknown_source_tokens": [
+        "occasionally"
+      ]
+    }
+  ],
+  "reloaded_five_match": true,
+  "checkpoint": "seq2seq_vocab1000.pt",
+  "checkpoint_sha256": "7c62d040d381b4483f56d87b331916c92da0e214dfc3a249dedc9a238d5badaf",
+  "elapsed_seconds": 162.41629793800007
+}

@@ -5,3 +5,5 @@
 *.ipynb text eol=lf
 *.html text eol=lf
 *.pt binary
+# Preserve the corpus provider's attribution file exactly.
+outputs/nmt/corpus_attribution.txt -text whitespace=-blank-at-eol

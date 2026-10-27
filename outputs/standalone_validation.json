@@ -1,0 +1,11 @@
+{
+  "fresh_working_directory": true,
+  "preexisting_outputs": false,
+  "preexisting_data": false,
+  "copied_input_files": [
+    "e89-Schwartzberg-Paul-HW08.ipynb",
+    "run_all.py"
+  ],
+  "successful_run": true,
+  "checked_utc": "2026-10-27T14:04:28.594458+00:00"
+}

@@ -1,0 +1,106 @@
+{
+  "selection_metric": "validation RMSE in USD",
+  "test_results_used": false,
+  "selected_lookbacks": {
+    "RNN": 60,
+    "LSTM": 120
+  },
+  "candidates": [
+    {
+      "run_name": "p2_rnn_10",
+      "model": "RNN",
+      "lookback": 10,
+      "selected_epoch": 88,
+      "validation_mae_usd": 11.885671604945006,
+      "validation_rmse_usd": 14.70482143101281,
+      "validation_baseline_mae_usd": 5.420372364463309,
+      "validation_baseline_rmse_usd": 7.838948670841542,
+      "validation_origins": 537,
+      "validation_target_cells": 537
+    },
+    {
+      "run_name": "p2_rnn_30",
+      "model": "RNN",
+      "lookback": 30,
+      "selected_epoch": 74,
+      "validation_mae_usd": 11.588683911541986,
+      "validation_rmse_usd": 14.272785962006,
+      "validation_baseline_mae_usd": 5.420372364463309,
+      "validation_baseline_rmse_usd": 7.838948670841542,
+      "validation_origins": 537,
+      "validation_target_cells": 537
+    },
+    {
+      "run_name": "p2_rnn_60",
+      "model": "RNN",
+      "lookback": 60,
+      "selected_epoch": 68,
+      "validation_mae_usd": 10.8418938833908,
+      "validation_rmse_usd": 13.722733903933214,
+      "validation_baseline_mae_usd": 5.420372364463309,
+      "validation_baseline_rmse_usd": 7.838948670841542,
+      "validation_origins": 537,
+      "validation_target_cells": 537
+    },
+    {
+      "run_name": "p2_rnn_120",
+      "model": "RNN",
+      "lookback": 120,
+      "selected_epoch": 40,
+      "validation_mae_usd": 11.406892801352276,
+      "validation_rmse_usd": 14.406586047783945,
+      "validation_baseline_mae_usd": 5.420372364463309,
+      "validation_baseline_rmse_usd": 7.838948670841542,
+      "validation_origins": 537,
+      "validation_target_cells": 537
+    },
+    {
+      "run_name": "p2_lstm_10",
+      "model": "LSTM",
+      "lookback": 10,
+      "selected_epoch": 68,
+      "validation_mae_usd": 14.74330426150416,
+      "validation_rmse_usd": 18.874057033630113,
+      "validation_baseline_mae_usd": 5.420372364463309,
+      "validation_baseline_rmse_usd": 7.838948670841542,
+      "validation_origins": 537,
+      "validation_target_cells": 537
+    },
+    {
+      "run_name": "p2_lstm_30",
+      "model": "LSTM",
+      "lookback": 30,
+      "selected_epoch": 61,
+      "validation_mae_usd": 12.797170060084962,
+      "validation_rmse_usd": 16.66910420982346,
+      "validation_baseline_mae_usd": 5.420372364463309,
+      "validation_baseline_rmse_usd": 7.838948670841542,
+      "validation_origins": 537,
+      "validation_target_cells": 537
+    },
+    {
+      "run_name": "p2_lstm_60",
+      "model": "LSTM",
+      "lookback": 60,
+      "selected_epoch": 40,
+      "validation_mae_usd": 13.072649737310144,
+      "validation_rmse_usd": 17.35258891030681,
+      "validation_baseline_mae_usd": 5.420372364463309,
+      "validation_baseline_rmse_usd": 7.838948670841542,
+      "validation_origins": 537,
+      "validation_target_cells": 537
+    },
+    {
+      "run_name": "p2_lstm_120",
+      "model": "LSTM",
+      "lookback": 120,
+      "selected_epoch": 55,
+      "validation_mae_usd": 12.831307068439392,
+      "validation_rmse_usd": 16.480401160207666,
+      "validation_baseline_mae_usd": 5.420372364463309,
+      "validation_baseline_rmse_usd": 7.838948670841542,
+      "validation_origins": 537,
+      "validation_target_cells": 537
+    }
+  ]
+}

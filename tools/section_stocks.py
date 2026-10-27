@@ -393,8 +393,8 @@ def make_cells():
         save_figure(fig, "problem1_stock_training.png")
         for row in p1_stock_results:
             verdict = "lower" if row["rmse_usd"] < row["baseline_rmse_usd"] else "higher"
-            display(Markdown(f"The **{row['model']}** has test RMSE **${row['rmse_usd']:.2f}**, "
-                             f"{verdict} than persistence at **${row['baseline_rmse_usd']:.2f}**.<br>\n"
+            display(Markdown(f"The **{row['model']}** has test RMSE **\\${row['rmse_usd']:.2f}**, "
+                             f"{verdict} than persistence at **\\${row['baseline_rmse_usd']:.2f}**.<br>\n"
                              "Following the price trend alone does not establish a forecasting improvement."))
         '''),
         md("""
@@ -520,9 +520,9 @@ def make_cells():
             row = p2_stock_table.loc[p2_stock_table["model"].eq(kind) & p2_stock_table["lookback"].eq(lookback)].iloc[0]
             verdict = "beats" if row["test_rmse_usd"] < row["test_baseline_rmse_usd"] else "does not beat"
             display(Markdown(f"For **{kind}**, validation selects **{lookback} observations**, "
-                             f"with validation RMSE **${row['validation_rmse_usd']:.2f}**.<br>\n"
-                             f"Its test RMSE is **${row['test_rmse_usd']:.2f}**; it {verdict} "
-                             f"persistence (**${row['test_baseline_rmse_usd']:.2f}**) on this test period."))
+                             f"with validation RMSE **\\${row['validation_rmse_usd']:.2f}**.<br>\n"
+                             f"Its test RMSE is **\\${row['test_rmse_usd']:.2f}**; it {verdict} "
+                             f"persistence (**\\${row['test_baseline_rmse_usd']:.2f}**) on this test period."))
         '''),
         md("""
         ### Predict five future opening prices from a `(60, 1)` input
@@ -605,8 +605,8 @@ def make_cells():
         for row in p2_five_results:
             verdict = "lower" if row["test_rmse_usd"] < row["test_baseline_rmse_usd"] else "higher"
             display(Markdown(f"The direct five-step **{row['model']}** has aggregate test RMSE "
-                             f"**${row['test_rmse_usd']:.2f}**, {verdict} than persistence at "
-                             f"**${row['test_baseline_rmse_usd']:.2f}**.<br>\n"
+                             f"**\\${row['test_rmse_usd']:.2f}**, {verdict} than persistence at "
+                             f"**\\${row['test_baseline_rmse_usd']:.2f}**.<br>\n"
                              f"This uses **{row['test_origins']} forecast origins**, each with five targets.<br>\n"
                              "The horizon table shows whether errors differ as the forecast moves further ahead."))
         '''),

@@ -8,6 +8,7 @@ from __future__ import annotations
 import argparse
 import ast
 import csv
+from collections import Counter
 from datetime import datetime, timezone
 import hashlib
 import html
@@ -15,6 +16,9 @@ import json
 import math
 from pathlib import Path
 import re
+import random
+import unicodedata
+import zipfile
 from zoneinfo import ZoneInfo
 
 import nbformat
@@ -68,11 +72,13 @@ class Audit:
     def run(self):
         for name, function in [
             ("Notebook and HTML", self.notebook),
+            ("Standalone execution", self.standalone),
             ("Microsoft data provenance", self.market_data),
             ("Stock split and scalers", self.stock_split),
             ("Twelve stock experiments", self.stock_runs),
             ("Stock metrics and selection", self.stock_tables),
             ("Vocabulary experiment", self.nmt),
+            ("Saved model manifest", self.checkpoint_manifest),
         ]:
             self.section(name, function)
         passed = sum(row["passed"] for row in self.checks)
@@ -124,6 +130,15 @@ class Audit:
         html_cells = len(re.findall(r'class="[^\"]*\bjp-CodeCell\b[^\"]*"', body))
         self.check("HTML contains every notebook code cell", html_cells == len(self.code), f"{html_cells} / {len(self.code)}")
         self.check("HTML embeds result figures", body.count("data:image/png;base64,") >= 5)
+
+    def standalone(self):
+        report = self.load("outputs/standalone_validation.json")
+        self.check("Complete run began in a fresh working directory", report.get("fresh_working_directory") is True)
+        self.check("Complete run had no pre-existing experiment outputs", report.get("preexisting_outputs") is False)
+        self.check("Complete run had no pre-existing data files", report.get("preexisting_data") is False)
+        self.check("Only the notebook and execution helper were supplied to the standalone run",
+                   sorted(report.get("copied_input_files", [])) == sorted([STEM + ".ipynb", "run_all.py"]))
+        self.check("Standalone notebook execution succeeded", report.get("successful_run") is True)
 
     def market_data(self):
         meta = self.load("data/MSFT_provenance.json")
@@ -328,7 +343,199 @@ class Audit:
             self.check_metrics(row, predictions, "", row["model"] + " horizon " + row["horizon"])
 
     def nmt(self):
-        raise FileNotFoundError("NMT artifact schema is still being prepared; this check cannot pass yet.")
+        import torch
+        nmt_dir = self.out / "nmt"
+        settings = self.load("outputs/nmt/settings.json")
+        required = {"QUICK_RUN": False, "MAX_PAIRS": None, "MAX_WORDS": 50,
+                    "BATCH_SIZE": 64, "EMBED_DIM": 128, "HIDDEN_DIM": 512,
+                    "EPOCHS": 10, "LEARNING_RATE": 0.001, "CLIP_NORM": 1.0,
+                    "SEED": 42, "vocabulary_budgets": [1000, 3000]}
+        self.check("NMT retains all supplied main-run settings", all(settings.get(k) == v for k, v in required.items()))
+        provenance = self.load("outputs/nmt/data_provenance.json")
+        archive = self.root / "data/nmt/spa-eng.zip"
+        expected_hash = "0c4fd7825d3d872488d38c157f784e035edab4f2ff0df25a2a208790ecb5b58f"
+        self.check("NMT archive is the unchanged starter snapshot",
+                   digest(archive) == provenance["archive_sha256"] == expected_hash)
+        self.check("NMT provenance identifies the supplied source notebook",
+                   provenance["source_notebook_sha256"] ==
+                   "d7ea900529283d49a280e09da2438a4f6e531053e93d4efe3115b123f628224f")
+
+        def tokenize(text):
+            return re.findall(r"\w+(?:['’]\w+)*|[^\w\s]",
+                              unicodedata.normalize("NFC", text).lower(), flags=re.UNICODE)
+
+        def detokenize(tokens):
+            return re.sub(r"([¿¡])\s+", r"\1", re.sub(r"\s+([.,!?;:])", r"\1", " ".join(tokens)))
+
+        with zipfile.ZipFile(archive) as source:
+            member = [name for name in source.namelist() if Path(name).name == "spa.txt"]
+            assert len(member) == 1
+            lines = source.read(member[0]).decode("utf-8-sig").splitlines()
+        raw_count, pairs, seen = 0, [], set()
+        for line in lines:
+            fields = line.split("\t")
+            if len(fields) >= 2 and fields[0].strip() and fields[1].strip():
+                raw_count += 1
+                pair = (tuple(tokenize(fields[0].strip())), tuple(tokenize(fields[1].strip())))
+                if 0 < len(pair[0]) <= 50 and 0 < len(pair[1]) <= 50 and pair not in seen:
+                    seen.add(pair)
+                    pairs.append(pair)
+        self.check("NMT uses the entire original retained corpus",
+                   raw_count == provenance["raw_pairs"] == 118964
+                   and len(pairs) == provenance["retained_pairs"] == 118960)
+        rng = random.Random(42)
+        rng.shuffle(pairs)
+        groups = {}
+        for pair in pairs:
+            groups.setdefault(pair[0], []).append(pair)
+        keys = list(groups)
+        rng.shuffle(keys)
+        cut1, cut2 = int(0.8 * len(keys)), int(0.9 * len(keys))
+        expected_splits = {name: [pair for key in chosen for pair in groups[key]]
+                           for name, chosen in (("train", keys[:cut1]),
+                                                ("validation", keys[cut1:cut2]),
+                                                ("test", keys[cut2:]))}
+        rows = csv_rows(nmt_dir / "split_manifest.csv")
+        splits = {name: [(tuple(row["english_tokens"].split()), tuple(row["spanish_tokens"].split()))
+                         for row in rows if row["split"] == name]
+                  for name in ("train", "validation", "test")}
+        self.check("NMT split manifests reproduce the source's two seeded shuffles",
+                   splits == expected_splits)
+        source_sets = [set(pair[0] for pair in splits[name]) for name in splits]
+        self.check("Normalised English inputs never cross NMT splits",
+                   all(source_sets[i].isdisjoint(source_sets[j]) for i, j in ((0, 1), (0, 2), (1, 2))))
+        self.check("NMT pair and group counts match their manifests",
+                   provenance["source_groups"] == len(groups)
+                   and provenance["split_pair_counts"] == {name: len(split) for name, split in splits.items()}
+                   and provenance["split_group_counts"] == {name: len({p[0] for p in split}) for name, split in splits.items()})
+        examples = self.load("outputs/nmt/five_sources.json")
+        sorted_indices = sorted(range(len(splits["test"])), key=lambda i: len(splits["test"][i][0]))
+        example_indices = [sorted_indices[int(i)] for i in np.linspace(0, len(sorted_indices) - 1, 5, dtype=int)]
+        self.check("The same five examples use the starter's pre-training selection",
+                   [row["test_index"] for row in examples] == example_indices
+                   and len({tuple(row["source_tokens"]) for row in examples}) == 5)
+        self.check("All five English inputs and references match held-out pairs",
+                   all(tuple(row["source_tokens"]) == splits["test"][row["test_index"]][0]
+                       and tuple(row["target_tokens"]) == splits["test"][row["test_index"]][1]
+                       and row["english"] == detokenize(row["source_tokens"])
+                       and row["reference"] == detokenize(row["target_tokens"]) for row in examples))
+        counts = {(name, side): Counter(token for pair in split for token in pair[side])
+                  for name, split in splits.items() for side in (0, 1)}
+        specials = ["<pad>", "<unk>", "<bos>", "<eos>"]
+        reports, vocabularies = {}, {}
+        for budget in (1000, 3000):
+            report = self.load(f"outputs/nmt/results_vocab{budget}.json")
+            history = self.load(f"outputs/nmt/history_vocab{budget}.json")
+            checkpoint_path = nmt_dir / report["checkpoint"]
+            checkpoint = torch.load(checkpoint_path, map_location="cpu", weights_only=True)
+            reports[budget] = report
+            self.check(f"Vocabulary {budget}: unchanged settings are stored with the model",
+                       report["settings"] == checkpoint["settings"] == settings
+                       and report["vocabulary_budget"] == checkpoint["vocabulary_budget"] == budget)
+            config = {"source_size": budget, "target_size": budget, "embed_dim": 128, "hidden_dim": 512}
+            self.check(f"Vocabulary {budget}: the one-layer encoder-decoder dimensions are unchanged",
+                       report["model_config"] == checkpoint["model_config"] == config)
+            self.check(f"Vocabulary {budget}: saved model checksum matches", digest(checkpoint_path) == report["checkpoint_sha256"])
+            state = checkpoint["model_state"]
+            parameter_count = 2629632 + 769 * budget
+            self.check(f"Vocabulary {budget}: saved parameters are finite, portable and correctly sized",
+                       report["parameters"] == sum(v.numel() for v in state.values()) == parameter_count
+                       and all(v.device.type == "cpu" and bool(torch.isfinite(v).all()) for v in state.values())
+                       and not any("_l1" in key or "_reverse" in key for key in state))
+            self.check(f"Vocabulary {budget}: all ten epoch histories agree",
+                       report["history"] == checkpoint["history"] == history
+                       and [row["epoch"] for row in history] == list(range(1, 11)))
+            self.check(f"Vocabulary {budget}: epoch timings and losses are finite",
+                       all(row["seconds"] > 0 and all(math.isfinite(row[split]["loss"]) and row[split]["loss"] >= 0
+                           for split in ("train", "valid")) for row in history))
+            selected = min(history, key=lambda row: row["valid"]["loss"])
+            self.check(f"Vocabulary {budget}: epoch selection uses minimum validation loss",
+                       report["best_epoch"] == checkpoint["best_epoch"] == selected["epoch"]
+                       and math.isclose(report["validation_metrics"]["loss"], selected["valid"]["loss"], abs_tol=1e-6)
+                       and math.isclose(report["validation_metrics"]["accuracy"], selected["valid"]["accuracy"], abs_tol=1e-9))
+            for side, language, field in ((0, "english", "source_tokens"), (1, "spanish", "target_tokens")):
+                vocabulary = checkpoint[field]
+                vocabularies[(budget, side)] = vocabulary
+                ranked = sorted(counts[("train", side)], key=lambda token: (-counts[("train", side)][token], token))
+                expected = specials + [token for token in ranked if token not in specials][:budget - 4]
+                self.check(f"Vocabulary {budget} {language}: vocabulary is fitted only to training counts",
+                           vocabulary == expected and len(set(vocabulary)) == budget)
+                vocabulary_set = set(vocabulary)
+                for split in splits:
+                    counter = counts[(split, side)]
+                    unknown = sum(number for token, number in counter.items() if token not in vocabulary_set)
+                    total = sum(counter.values())
+                    word_total = sum(number for token, number in counter.items() if re.fullmatch(r"\w+(?:['’]\w+)*", token))
+                    word_unknown = sum(number for token, number in counter.items()
+                                       if token not in vocabulary_set and re.fullmatch(r"\w+(?:['’]\w+)*", token))
+                    coverage = report["coverage"][split][language]
+                    self.check(f"Vocabulary {budget} {language} {split}: unknown counts and percentages independently recompute",
+                               coverage["unknown_tokens"] == unknown and coverage["content_tokens"] == total
+                               and math.isclose(coverage["unknown_rate"], unknown / total, abs_tol=1e-12)
+                               and coverage["unknown_words"] == word_unknown and coverage["words"] == word_total
+                               and math.isclose(coverage["word_unknown_rate"], word_unknown / word_total, abs_tol=1e-12))
+            metric_records = [("train", row["train"]) for row in history]
+            metric_records += [("validation", row["valid"]) for row in history]
+            metric_records += [("validation", report["validation_metrics"]), ("test", report["test_metrics"])]
+            valid_metrics = True
+            for split, metric in metric_records:
+                total = sum(counts[(split, 1)].values()) + len(splits[split])
+                expected_unknown = report["coverage"][split]["spanish"]["unknown_tokens"]
+                valid_metrics &= (metric["tokens"] == total and metric["unknown_targets"] == expected_unknown
+                                  and 0 <= metric["resolved_correct_tokens"] <= metric["correct_tokens"] <= total
+                                  and metric["correct_tokens"] - metric["resolved_correct_tokens"] <= expected_unknown
+                                  and math.isclose(metric["accuracy"], metric["correct_tokens"] / total, abs_tol=1e-12)
+                                  and math.isclose(metric["accuracy_unk_as_error"], metric["resolved_correct_tokens"] / total, abs_tol=1e-12))
+            self.check(f"Vocabulary {budget}: accuracy denominators exclude padding and include EOS exactly once", valid_metrics)
+            translations = report["translations"]
+            self.check(f"Vocabulary {budget}: all five translations use identical held-out inputs and references",
+                       len(translations) == 5 and all(all(row[key] == example[key] for key in
+                           ("test_index", "english", "reference", "source_tokens", "target_tokens"))
+                           for row, example in zip(translations, examples)))
+            source_set = set(checkpoint["source_tokens"])
+            self.check(f"Vocabulary {budget}: generated result and unknown-source fields are complete",
+                       all(isinstance(row["translation"], str) and isinstance(row["ended_with_eos"], bool)
+                           and row["unknown_source_tokens"] == [t for t in row["source_tokens"] if t not in source_set]
+                           for row in translations))
+            self.check(f"Vocabulary {budget}: a fresh model reproduces all five generated translations", report["reloaded_five_match"] is True)
+        self.check("The larger vocabularies contain the entire smaller vocabularies",
+                   all(vocabularies[(1000, side)] == vocabularies[(3000, side)][:1000] for side in (0, 1)))
+        self.check("Larger vocabularies cannot increase unknown-token counts",
+                   all(reports[3000]["coverage"][split][language]["unknown_tokens"] <= reports[1000]["coverage"][split][language]["unknown_tokens"]
+                       for split in splits for language in ("english", "spanish")))
+        comparison = csv_rows(nmt_dir / "vocabulary_comparison.csv")
+        self.check("Required unknown-word and validation-accuracy comparison is complete",
+                   len(comparison) == 2 and all(
+                       math.isclose(float(row["English validation unknown %"]), reports[int(row["vocabulary"])]["coverage"]["validation"]["english"]["unknown_rate"] * 100, abs_tol=1e-8)
+                       and math.isclose(float(row["Spanish validation unknown %"]), reports[int(row["vocabulary"])]["coverage"]["validation"]["spanish"]["unknown_rate"] * 100, abs_tol=1e-8)
+                       and math.isclose(float(row["validation accuracy %"]), reports[int(row["vocabulary"])]["validation_metrics"]["accuracy"] * 100, abs_tol=1e-8)
+                       and int(row["selected_epoch"]) == reports[int(row["vocabulary"])]["best_epoch"] for row in comparison))
+        translated = csv_rows(nmt_dir / "five_translation_comparison.csv")
+        self.check("The side-by-side table contains exactly the same five predictions and references",
+                   len(translated) == 5 and all(
+                       row["English"] == examples[i]["english"] and row["Spanish reference"] == examples[i]["reference"]
+                       and row["vocabulary 1000"] == reports[1000]["translations"][i]["translation"]
+                       and row["vocabulary 3000"] == reports[3000]["translations"][i]["translation"] for i, row in enumerate(translated)))
+        discussion = re.search(r"(?ims)^#{1,6}\s+(?:Translation differences|What changed in the translations)[^\n]*\n(.*?)(?=^#{1,6}\s+|\Z)", self.markdown)
+        self.check("The translation comparison has a written discussion using examples",
+                   discussion is not None and len(discussion.group(1).split()) >= 50)
+
+    def checkpoint_manifest(self):
+        manifest = self.load("outputs/checkpoint_manifest.json")
+        rows = manifest["checkpoints"]
+        expected = {"outputs/stocks/" + name + ".pt" for name, *_ in self.expected_runs()}
+        expected |= {"outputs/nmt/seq2seq_vocab1000.pt", "outputs/nmt/seq2seq_vocab3000.pt"}
+        self.check("The model manifest includes all fourteen trained checkpoints",
+                   len(rows) == 14 and {row["path"] for row in rows} == expected)
+        valid = True
+        for row in rows:
+            path = (self.root / row["path"]).resolve()
+            valid &= path.is_relative_to(self.root.resolve()) and path.is_file()
+            valid &= path.stat().st_size == row["bytes"] and digest(path) == row["sha256"]
+        self.check("Every checkpoint file exactly matches its recorded byte count and checksum", valid)
+        self.check("The model transfer bundle has a recorded size and SHA256",
+                   manifest["bundle_bytes"] > 0 and re.fullmatch(r"[0-9a-f]{64}", manifest["bundle_sha256"]) is not None
+                   and manifest["part_size"] == 1048576)
 
 
 def main():

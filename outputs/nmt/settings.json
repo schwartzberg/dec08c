@@ -1,0 +1,17 @@
+{
+  "QUICK_RUN": false,
+  "MAX_PAIRS": null,
+  "MAX_WORDS": 50,
+  "BATCH_SIZE": 64,
+  "EMBED_DIM": 128,
+  "HIDDEN_DIM": 512,
+  "EPOCHS": 10,
+  "LEARNING_RATE": 0.001,
+  "CLIP_NORM": 1.0,
+  "SEED": 42,
+  "vocabulary_budgets": [
+    1000,
+    3000
+  ],
+  "checkpoint_selection": "minimum validation token cross-entropy"
+}

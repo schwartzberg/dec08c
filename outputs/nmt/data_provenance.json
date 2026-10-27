@@ -1,0 +1,19 @@
+{
+  "source_url": "https://storage.googleapis.com/download.tensorflow.org/data/spa-eng.zip",
+  "archive_sha256": "0c4fd7825d3d872488d38c157f784e035edab4f2ff0df25a2a208790ecb5b58f",
+  "archive_date": "2018-05-13",
+  "raw_pairs": 118964,
+  "retained_pairs": 118960,
+  "source_groups": 102901,
+  "split_pair_counts": {
+    "train": 95096,
+    "validation": 11955,
+    "test": 11909
+  },
+  "split_group_counts": {
+    "train": 82320,
+    "validation": 10290,
+    "test": 10291
+  },
+  "source_notebook_sha256": "d7ea900529283d49a280e09da2438a4f6e531053e93d4efe3115b123f628224f"
+}

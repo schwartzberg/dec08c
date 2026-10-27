@@ -1,0 +1,8 @@
+{
+  "outputs/stocks/problem1_metrics.csv": "de6e9370600015558f48b8af1147bfb8cf73e91ebca7a982d140838096009f05",
+  "outputs/stocks/problem2_lookback_metrics.csv": "7a367164d773d1a718c238ad73c95fe8bd858221b32177ee2846d393ed8c1471",
+  "outputs/stocks/problem2_five_step_metrics.csv": "558a98b4460e92b28c857310b07f6a517ee071ce560fdb5cb666c4371b690f32",
+  "outputs/stocks/problem2_horizon_metrics.csv": "ac06d79373f38094835286c329b21f8e398e2c0e7a635723e5705e4ee98db327",
+  "outputs/nmt/vocabulary_comparison.csv": "f1b9ec4c7ee508a42d74b79a25575d6417a872f83507272f0fd86f174d73943b",
+  "outputs/nmt/five_translation_comparison.csv": "cda91bed109cc4c5dcf321f0c42cdf9f61bb7ab4683d4be44a66832fb8f94408"
+}

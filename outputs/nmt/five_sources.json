@@ -1,0 +1,145 @@
+[
+  {
+    "test_index": 2937,
+    "english": "hi.",
+    "reference": "hola.",
+    "source_tokens": [
+      "hi",
+      "."
+    ],
+    "target_tokens": [
+      "hola",
+      "."
+    ]
+  },
+  {
+    "test_index": 197,
+    "english": "i am a good boy.",
+    "reference": "soy un buen tipo.",
+    "source_tokens": [
+      "i",
+      "am",
+      "a",
+      "good",
+      "boy",
+      "."
+    ],
+    "target_tokens": [
+      "soy",
+      "un",
+      "buen",
+      "tipo",
+      "."
+    ]
+  },
+  {
+    "test_index": 6351,
+    "english": "may i turn on the radio?",
+    "reference": "¿te importa que encienda la radio?",
+    "source_tokens": [
+      "may",
+      "i",
+      "turn",
+      "on",
+      "the",
+      "radio",
+      "?"
+    ],
+    "target_tokens": [
+      "¿",
+      "te",
+      "importa",
+      "que",
+      "encienda",
+      "la",
+      "radio",
+      "?"
+    ]
+  },
+  {
+    "test_index": 3146,
+    "english": "tom is looking forward to seeing mary again.",
+    "reference": "tom está deseando volver a ver a mary.",
+    "source_tokens": [
+      "tom",
+      "is",
+      "looking",
+      "forward",
+      "to",
+      "seeing",
+      "mary",
+      "again",
+      "."
+    ],
+    "target_tokens": [
+      "tom",
+      "está",
+      "deseando",
+      "volver",
+      "a",
+      "ver",
+      "a",
+      "mary",
+      "."
+    ]
+  },
+  {
+    "test_index": 10760,
+    "english": "even now, i occasionally think i'd like to see you. not the you that you are today, but the you i remember from the past.",
+    "reference": "incluso ahora, a veces pienso que me gustaría verte. no como eres hoy, sino como te recuerdo.",
+    "source_tokens": [
+      "even",
+      "now",
+      ",",
+      "i",
+      "occasionally",
+      "think",
+      "i'd",
+      "like",
+      "to",
+      "see",
+      "you",
+      ".",
+      "not",
+      "the",
+      "you",
+      "that",
+      "you",
+      "are",
+      "today",
+      ",",
+      "but",
+      "the",
+      "you",
+      "i",
+      "remember",
+      "from",
+      "the",
+      "past",
+      "."
+    ],
+    "target_tokens": [
+      "incluso",
+      "ahora",
+      ",",
+      "a",
+      "veces",
+      "pienso",
+      "que",
+      "me",
+      "gustaría",
+      "verte",
+      ".",
+      "no",
+      "como",
+      "eres",
+      "hoy",
+      ",",
+      "sino",
+      "como",
+      "te",
+      "recuerdo",
+      "."
+    ]
+  }
+]

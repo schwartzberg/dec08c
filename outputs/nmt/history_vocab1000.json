@@ -1,0 +1,222 @@
+[
+  {
+    "epoch": 1,
+    "train": {
+      "loss": 2.2448811929299204,
+      "accuracy": 0.5467349357510843,
+      "accuracy_unk_as_error": 0.43158524507429197,
+      "correct_tokens": 432247,
+      "resolved_correct_tokens": 341210,
+      "tokens": 790597,
+      "unknown_targets": 116707
+    },
+    "valid": {
+      "loss": 1.5473655636410426,
+      "accuracy": 0.6435685569405443,
+      "accuracy_unk_as_error": 0.5276470231721853,
+      "correct_tokens": 63712,
+      "resolved_correct_tokens": 52236,
+      "tokens": 98998,
+      "unknown_targets": 14769
+    },
+    "seconds": 15.995136653999907
+  },
+  {
+    "epoch": 2,
+    "train": {
+      "loss": 1.2911274737378668,
+      "accuracy": 0.6882646911131715,
+      "accuracy_unk_as_error": 0.5736968392240295,
+      "correct_tokens": 544140,
+      "resolved_correct_tokens": 453563,
+      "tokens": 790597,
+      "unknown_targets": 116707
+    },
+    "valid": {
+      "loss": 1.2298826372824057,
+      "accuracy": 0.7003171781248106,
+      "accuracy_unk_as_error": 0.5895371623669166,
+      "correct_tokens": 69330,
+      "resolved_correct_tokens": 58363,
+      "tokens": 98998,
+      "unknown_targets": 14769
+    },
+    "seconds": 15.694319080000014
+  },
+  {
+    "epoch": 3,
+    "train": {
+      "loss": 1.0119713101657053,
+      "accuracy": 0.7431055265830758,
+      "accuracy_unk_as_error": 0.6259914975644987,
+      "correct_tokens": 587497,
+      "resolved_correct_tokens": 494907,
+      "tokens": 790597,
+      "unknown_targets": 116707
+    },
+    "valid": {
+      "loss": 1.1433569681317148,
+      "accuracy": 0.7168528657144588,
+      "accuracy_unk_as_error": 0.6051132346108002,
+      "correct_tokens": 70967,
+      "resolved_correct_tokens": 59905,
+      "tokens": 98998,
+      "unknown_targets": 14769
+    },
+    "seconds": 15.78618812500008
+  },
+  {
+    "epoch": 4,
+    "train": {
+      "loss": 0.842278760774307,
+      "accuracy": 0.7793136073119428,
+      "accuracy_unk_as_error": 0.6591512489928497,
+      "correct_tokens": 616123,
+      "resolved_correct_tokens": 521123,
+      "tokens": 790597,
+      "unknown_targets": 116707
+    },
+    "valid": {
+      "loss": 1.1142818623787105,
+      "accuracy": 0.7231358209256753,
+      "accuracy_unk_as_error": 0.6077395502939453,
+      "correct_tokens": 71589,
+      "resolved_correct_tokens": 60165,
+      "tokens": 98998,
+      "unknown_targets": 14769
+    },
+    "seconds": 15.814644579999822
+  },
+  {
+    "epoch": 5,
+    "train": {
+      "loss": 0.7117407638802272,
+      "accuracy": 0.8079754919383706,
+      "accuracy_unk_as_error": 0.6847230637100824,
+      "correct_tokens": 638783,
+      "resolved_correct_tokens": 541340,
+      "tokens": 790597,
+      "unknown_targets": 116707
+    },
+    "valid": {
+      "loss": 1.1219530874903645,
+      "accuracy": 0.7237721974181297,
+      "accuracy_unk_as_error": 0.6130022828744015,
+      "correct_tokens": 71652,
+      "resolved_correct_tokens": 60686,
+      "tokens": 98998,
+      "unknown_targets": 14769
+    },
+    "seconds": 16.014603019999868
+  },
+  {
+    "epoch": 6,
+    "train": {
+      "loss": 0.6004391150255447,
+      "accuracy": 0.8342417185999947,
+      "accuracy_unk_as_error": 0.7078789825916364,
+      "correct_tokens": 659549,
+      "resolved_correct_tokens": 559647,
+      "tokens": 790597,
+      "unknown_targets": 116707
+    },
+    "valid": {
+      "loss": 1.1475279508314917,
+      "accuracy": 0.7231358209256753,
+      "accuracy_unk_as_error": 0.611668922604497,
+      "correct_tokens": 71589,
+      "resolved_correct_tokens": 60554,
+      "tokens": 98998,
+      "unknown_targets": 14769
+    },
+    "seconds": 16.111780584000144
+  },
+  {
+    "epoch": 7,
+    "train": {
+      "loss": 0.5084661361209917,
+      "accuracy": 0.8569384907860769,
+      "accuracy_unk_as_error": 0.7277449825891067,
+      "correct_tokens": 677493,
+      "resolved_correct_tokens": 575353,
+      "tokens": 790597,
+      "unknown_targets": 116707
+    },
+    "valid": {
+      "loss": 1.1848805348808933,
+      "accuracy": 0.7213277035899716,
+      "accuracy_unk_as_error": 0.6123154003111174,
+      "correct_tokens": 71410,
+      "resolved_correct_tokens": 60618,
+      "tokens": 98998,
+      "unknown_targets": 14769
+    },
+    "seconds": 16.063078196999868
+  },
+  {
+    "epoch": 8,
+    "train": {
+      "loss": 0.43090079978567375,
+      "accuracy": 0.877201658999465,
+      "accuracy_unk_as_error": 0.7455100386163873,
+      "correct_tokens": 693513,
+      "resolved_correct_tokens": 589398,
+      "tokens": 790597,
+      "unknown_targets": 116707
+    },
+    "valid": {
+      "loss": 1.2317348552589722,
+      "accuracy": 0.7171963069961009,
+      "accuracy_unk_as_error": 0.6076688417947838,
+      "correct_tokens": 71001,
+      "resolved_correct_tokens": 60158,
+      "tokens": 98998,
+      "unknown_targets": 14769
+    },
+    "seconds": 16.209104430000025
+  },
+  {
+    "epoch": 9,
+    "train": {
+      "loss": 0.36921963305529765,
+      "accuracy": 0.8927860844399865,
+      "accuracy_unk_as_error": 0.759165541989155,
+      "correct_tokens": 705834,
+      "resolved_correct_tokens": 600194,
+      "tokens": 790597,
+      "unknown_targets": 116707
+    },
+    "valid": {
+      "loss": 1.2784085612544729,
+      "accuracy": 0.7180044041293764,
+      "accuracy_unk_as_error": 0.6109113315420514,
+      "correct_tokens": 71081,
+      "resolved_correct_tokens": 60479,
+      "tokens": 98998,
+      "unknown_targets": 14769
+    },
+    "seconds": 16.37246944599997
+  },
+  {
+    "epoch": 10,
+    "train": {
+      "loss": 0.3193461506017849,
+      "accuracy": 0.9067147990695639,
+      "accuracy_unk_as_error": 0.771497994553483,
+      "correct_tokens": 716846,
+      "resolved_correct_tokens": 609944,
+      "tokens": 790597,
+      "unknown_targets": 116707
+    },
+    "valid": {
+      "loss": 1.3353336552865178,
+      "accuracy": 0.7143073597446413,
+      "accuracy_unk_as_error": 0.6046687811874988,
+      "correct_tokens": 70715,
+      "resolved_correct_tokens": 59861,
+      "tokens": 98998,
+      "unknown_targets": 14769
+    },
+    "seconds": 16.471297311999933
+  }
+]

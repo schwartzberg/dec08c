@@ -5,6 +5,17 @@ Schwartzberg, Paul
 The submission is `e89-Schwartzberg-Paul-HW08.ipynb` and its matching HTML export.
 All three solutions are in this notebook.
 
+The saved run completed all 13 code cells in a fresh Colab Tesla T4 kernel,
+starting with no data or results files.
+All 12 stock models trained for 100 epochs, and both translation models trained
+for 10 epochs on the full retained corpus.
+All 14 checkpoints passed reload checks, and all 392 independent evidence checks
+passed; see `outputs/submission_validation.json`.
+
+On this test period, persistence has lower errors than the neural stock models.
+The larger translation vocabulary improves coverage, while the five translations
+show both improvements and remaining errors.
+
 ## Run
 
 [Open in Colab](https://colab.research.google.com/github/schwartzberg/dec08c/blob/main/e89-Schwartzberg-Paul-HW08.ipynb),

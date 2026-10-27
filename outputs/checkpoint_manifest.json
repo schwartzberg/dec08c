@@ -1,0 +1,77 @@
+{
+  "bundle_sha256": "1020930e7dfcb48dbdb1126c627af550e3ee68c126723b276172a2049852274d",
+  "bundle_bytes": 33135642,
+  "part_size": 1048576,
+  "checkpoints": [
+    {
+      "path": "outputs/nmt/seq2seq_vocab1000.pt",
+      "bytes": 13632755,
+      "sha256": "7c62d040d381b4483f56d87b331916c92da0e214dfc3a249dedc9a238d5badaf"
+    },
+    {
+      "path": "outputs/nmt/seq2seq_vocab3000.pt",
+      "bytes": 19851379,
+      "sha256": "fee27b52f1618c906738f4c4ec927a7324a475f92b6b7cba3f7a935d1ef65696"
+    },
+    {
+      "path": "outputs/stocks/p1_lstm_60.pt",
+      "bytes": 301557,
+      "sha256": "9dfad677c254fd71fd4f33709721fd9d0939653db48da0ea63b8f5f58eabe090"
+    },
+    {
+      "path": "outputs/stocks/p1_rnn_60.pt",
+      "bytes": 86237,
+      "sha256": "2235114bfa0de5f39b92181fb5bc7272a029851252c3accafaea038b2eca2c82"
+    },
+    {
+      "path": "outputs/stocks/p2_lstm_10.pt",
+      "bytes": 301493,
+      "sha256": "8b341dcdebd2375253f06d188232764aa6cb920eeeb617dd5e1ff8004d1705d4"
+    },
+    {
+      "path": "outputs/stocks/p2_lstm_120.pt",
+      "bytes": 301517,
+      "sha256": "cf8b7e4010d57c0b14ab86b7a276bd65e1f3cb88b905bd8c9ea41e9be8c70c90"
+    },
+    {
+      "path": "outputs/stocks/p2_lstm_30.pt",
+      "bytes": 301493,
+      "sha256": "a4365393571ab11b1df7fe1a513e0ca6a374954a69d1f726b231ff68aa9613ed"
+    },
+    {
+      "path": "outputs/stocks/p2_lstm_60.pt",
+      "bytes": 301493,
+      "sha256": "123811df0a5b65ed89ec531b8f5b7e4c36faf0ff08443066650b3c638adcd480"
+    },
+    {
+      "path": "outputs/stocks/p2_lstm_60_five.pt",
+      "bytes": 302445,
+      "sha256": "04cb15455549420d07b2dd1058f461b7fd4523503c7330e3f593b75dd2e45d65"
+    },
+    {
+      "path": "outputs/stocks/p2_rnn_10.pt",
+      "bytes": 86173,
+      "sha256": "878ae62226e6787245303850b37bdbff0f54337def889947fe8d4798a9bcefbb"
+    },
+    {
+      "path": "outputs/stocks/p2_rnn_120.pt",
+      "bytes": 86197,
+      "sha256": "b10db5ea0cef9081984dd9b18b08d093e84db0083d18d0fa61d206a91aed5bb2"
+    },
+    {
+      "path": "outputs/stocks/p2_rnn_30.pt",
+      "bytes": 86173,
+      "sha256": "47886ddf11038107018f908866fffdaecfca94c915df9f17f3332a2c7f8f89f2"
+    },
+    {
+      "path": "outputs/stocks/p2_rnn_60.pt",
+      "bytes": 86173,
+      "sha256": "207d5e15824833b9d6fd5fcd8faac2daec7fd8361f01ed43fecfb15bfbbde2a9"
+    },
+    {
+      "path": "outputs/stocks/p2_rnn_60_five.pt",
+      "bytes": 87125,
+      "sha256": "9acd5e6d2280901f85dc506684ccfc1ac603c162f16787899879ca5f6886cbd3"
+    }
+  ]
+}

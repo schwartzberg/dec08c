@@ -1,0 +1,1971 @@
+{
+  "checked_utc": "2026-10-27T14:26:05.934242+00:00",
+  "notebook": "e89-Schwartzberg-Paul-HW08.ipynb",
+  "training_performed": false,
+  "notebook_execution_performed": false,
+  "passed": true,
+  "checks_passed": 392,
+  "checks_total": 392,
+  "checks": [
+    {
+      "check": "Notebook schema is valid",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Author's name is present",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "All three problem headings are present",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "All code cells contain valid Python",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "All code cells executed in order",
+      "passed": true,
+      "detail": "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]"
+    },
+    {
+      "check": "Notebook has no error output",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "Every code cell has comments or adjacent explanation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Result figures are embedded",
+      "passed": true,
+      "detail": "6"
+    },
+    {
+      "check": "Execution used a fresh kernel",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Execution record matches code-cell count",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Execution duration is positive",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Notebook and saved execution records match",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Run used a CUDA GPU",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "HTML export includes author and all three problems",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "HTML contains every notebook code cell",
+      "passed": true,
+      "detail": "13 / 13"
+    },
+    {
+      "check": "HTML embeds result figures",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Complete run began in a fresh working directory",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Complete run had no pre-existing experiment outputs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Complete run had no pre-existing data files",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Only the notebook and execution helper were supplied to the standalone run",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Standalone notebook execution succeeded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Provider response is genuinely for Microsoft",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Raw provider file matches its checksum",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Provenance identifies the unadjusted Open field",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "all: CSV checksum matches",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "all: row count and endpoints match provenance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "all: dates are unique and chronological",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "all: every Open matches the raw provider response",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "development: CSV checksum matches",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "development: row count and endpoints match provenance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "development: dates are unique and chronological",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "development: every Open matches the raw provider response",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "test: CSV checksum matches",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "test: row count and endpoints match provenance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "test: dates are unique and chronological",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "test: every Open matches the raw provider response",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Development covers the requested trading-date endpoints",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Test covers the requested trading-date endpoints",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Development precedes all test targets",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Full history contains development unchanged",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "September 8 is retained as input-only gap context",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Problem 2 uses the exact chronological 80/20 row split",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Recorded training and validation dates are exact chronological slices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Recorded test dates exactly match the requested test file",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Gap context is outside every target split",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Problem 2: scaler sees only its declared fitting rows",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Problem 2: scaler extrema independently match raw fitting prices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Problem 2: scaler scale and offset independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "All one-step lookbacks use the same train target origins",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "One-step validation origins start at the validation boundary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "One-step test origins include every test trading date",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Five-step training targets never cross the train boundary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Five-step validation targets never cross the validation boundary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "All five-step test targets stay inside the test period",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Five-step examples have the required input and target shapes",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Exactly twelve stock run records are saved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p1_rnn_60: supplied recurrent architecture and settings retained",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p1_rnn_60: input and target shapes match the experiment",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p1_rnn_60: all one hundred training epochs completed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p1_rnn_60: scaler sees only its declared fitting rows",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p1_rnn_60: scaler extrema independently match raw fitting prices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p1_rnn_60: scaler scale and offset independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p1_rnn_60: exact chronological training/validation origins are saved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p1_rnn_60: baseline has no validation fitting",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p1_rnn_60: checkpoint epoch follows the stated selection rule",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p1_rnn_60: checkpoint holds the expected finite CPU parameter tensors",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p1_rnn_60: model and scaler reload checks passed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p1_rnn_60 test: expected number of origin-horizon pairs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p1_rnn_60 test: all expected forecasts appear exactly once",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p1_rnn_60 test: input dates precede every target and match lookback",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p1_rnn_60 test: targets and persistence independently match raw prices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p1_rnn_60 test: every model forecast is finite",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p1_lstm_60: supplied recurrent architecture and settings retained",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p1_lstm_60: input and target shapes match the experiment",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p1_lstm_60: all one hundred training epochs completed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p1_lstm_60: scaler sees only its declared fitting rows",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p1_lstm_60: scaler extrema independently match raw fitting prices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p1_lstm_60: scaler scale and offset independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p1_lstm_60: exact chronological training/validation origins are saved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p1_lstm_60: baseline has no validation fitting",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p1_lstm_60: checkpoint epoch follows the stated selection rule",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p1_lstm_60: checkpoint holds the expected finite CPU parameter tensors",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p1_lstm_60: model and scaler reload checks passed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p1_lstm_60 test: expected number of origin-horizon pairs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p1_lstm_60 test: all expected forecasts appear exactly once",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p1_lstm_60 test: input dates precede every target and match lookback",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p1_lstm_60 test: targets and persistence independently match raw prices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p1_lstm_60 test: every model forecast is finite",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_10: supplied recurrent architecture and settings retained",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_10: input and target shapes match the experiment",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_10: all one hundred training epochs completed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_10: scaler sees only its declared fitting rows",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_10: scaler extrema independently match raw fitting prices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_10: scaler scale and offset independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_10: exact chronological training/validation origins are saved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_10: validation losses are finite",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_10: checkpoint epoch follows the stated selection rule",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_10: checkpoint holds the expected finite CPU parameter tensors",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_10: model and scaler reload checks passed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_10 test: expected number of origin-horizon pairs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_10 test: all expected forecasts appear exactly once",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_10 test: input dates precede every target and match lookback",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_10 test: targets and persistence independently match raw prices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_10 test: every model forecast is finite",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_10 validation: expected number of origin-horizon pairs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_10 validation: all expected forecasts appear exactly once",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_10 validation: input dates precede every target and match lookback",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_10 validation: targets and persistence independently match raw prices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_10 validation: every model forecast is finite",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_30: supplied recurrent architecture and settings retained",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_30: input and target shapes match the experiment",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_30: all one hundred training epochs completed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_30: scaler sees only its declared fitting rows",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_30: scaler extrema independently match raw fitting prices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_30: scaler scale and offset independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_30: exact chronological training/validation origins are saved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_30: validation losses are finite",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_30: checkpoint epoch follows the stated selection rule",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_30: checkpoint holds the expected finite CPU parameter tensors",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_30: model and scaler reload checks passed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_30 test: expected number of origin-horizon pairs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_30 test: all expected forecasts appear exactly once",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_30 test: input dates precede every target and match lookback",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_30 test: targets and persistence independently match raw prices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_30 test: every model forecast is finite",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_30 validation: expected number of origin-horizon pairs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_30 validation: all expected forecasts appear exactly once",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_30 validation: input dates precede every target and match lookback",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_30 validation: targets and persistence independently match raw prices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_30 validation: every model forecast is finite",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60: supplied recurrent architecture and settings retained",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60: input and target shapes match the experiment",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60: all one hundred training epochs completed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60: scaler sees only its declared fitting rows",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60: scaler extrema independently match raw fitting prices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60: scaler scale and offset independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60: exact chronological training/validation origins are saved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60: validation losses are finite",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60: checkpoint epoch follows the stated selection rule",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60: checkpoint holds the expected finite CPU parameter tensors",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60: model and scaler reload checks passed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60 test: expected number of origin-horizon pairs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60 test: all expected forecasts appear exactly once",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60 test: input dates precede every target and match lookback",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60 test: targets and persistence independently match raw prices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60 test: every model forecast is finite",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60 validation: expected number of origin-horizon pairs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60 validation: all expected forecasts appear exactly once",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60 validation: input dates precede every target and match lookback",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60 validation: targets and persistence independently match raw prices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60 validation: every model forecast is finite",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_120: supplied recurrent architecture and settings retained",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_120: input and target shapes match the experiment",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_120: all one hundred training epochs completed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_120: scaler sees only its declared fitting rows",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_120: scaler extrema independently match raw fitting prices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_120: scaler scale and offset independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_120: exact chronological training/validation origins are saved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_120: validation losses are finite",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_120: checkpoint epoch follows the stated selection rule",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_120: checkpoint holds the expected finite CPU parameter tensors",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_120: model and scaler reload checks passed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_120 test: expected number of origin-horizon pairs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_120 test: all expected forecasts appear exactly once",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_120 test: input dates precede every target and match lookback",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_120 test: targets and persistence independently match raw prices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_120 test: every model forecast is finite",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_120 validation: expected number of origin-horizon pairs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_120 validation: all expected forecasts appear exactly once",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_120 validation: input dates precede every target and match lookback",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_120 validation: targets and persistence independently match raw prices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_120 validation: every model forecast is finite",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_10: supplied recurrent architecture and settings retained",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_10: input and target shapes match the experiment",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_10: all one hundred training epochs completed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_10: scaler sees only its declared fitting rows",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_10: scaler extrema independently match raw fitting prices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_10: scaler scale and offset independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_10: exact chronological training/validation origins are saved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_10: validation losses are finite",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_10: checkpoint epoch follows the stated selection rule",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_10: checkpoint holds the expected finite CPU parameter tensors",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_10: model and scaler reload checks passed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_10 test: expected number of origin-horizon pairs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_10 test: all expected forecasts appear exactly once",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_10 test: input dates precede every target and match lookback",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_10 test: targets and persistence independently match raw prices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_10 test: every model forecast is finite",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_10 validation: expected number of origin-horizon pairs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_10 validation: all expected forecasts appear exactly once",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_10 validation: input dates precede every target and match lookback",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_10 validation: targets and persistence independently match raw prices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_10 validation: every model forecast is finite",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_30: supplied recurrent architecture and settings retained",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_30: input and target shapes match the experiment",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_30: all one hundred training epochs completed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_30: scaler sees only its declared fitting rows",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_30: scaler extrema independently match raw fitting prices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_30: scaler scale and offset independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_30: exact chronological training/validation origins are saved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_30: validation losses are finite",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_30: checkpoint epoch follows the stated selection rule",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_30: checkpoint holds the expected finite CPU parameter tensors",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_30: model and scaler reload checks passed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_30 test: expected number of origin-horizon pairs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_30 test: all expected forecasts appear exactly once",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_30 test: input dates precede every target and match lookback",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_30 test: targets and persistence independently match raw prices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_30 test: every model forecast is finite",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_30 validation: expected number of origin-horizon pairs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_30 validation: all expected forecasts appear exactly once",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_30 validation: input dates precede every target and match lookback",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_30 validation: targets and persistence independently match raw prices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_30 validation: every model forecast is finite",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60: supplied recurrent architecture and settings retained",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60: input and target shapes match the experiment",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60: all one hundred training epochs completed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60: scaler sees only its declared fitting rows",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60: scaler extrema independently match raw fitting prices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60: scaler scale and offset independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60: exact chronological training/validation origins are saved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60: validation losses are finite",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60: checkpoint epoch follows the stated selection rule",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60: checkpoint holds the expected finite CPU parameter tensors",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60: model and scaler reload checks passed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60 test: expected number of origin-horizon pairs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60 test: all expected forecasts appear exactly once",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60 test: input dates precede every target and match lookback",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60 test: targets and persistence independently match raw prices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60 test: every model forecast is finite",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60 validation: expected number of origin-horizon pairs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60 validation: all expected forecasts appear exactly once",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60 validation: input dates precede every target and match lookback",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60 validation: targets and persistence independently match raw prices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60 validation: every model forecast is finite",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_120: supplied recurrent architecture and settings retained",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_120: input and target shapes match the experiment",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_120: all one hundred training epochs completed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_120: scaler sees only its declared fitting rows",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_120: scaler extrema independently match raw fitting prices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_120: scaler scale and offset independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_120: exact chronological training/validation origins are saved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_120: validation losses are finite",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_120: checkpoint epoch follows the stated selection rule",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_120: checkpoint holds the expected finite CPU parameter tensors",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_120: model and scaler reload checks passed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_120 test: expected number of origin-horizon pairs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_120 test: all expected forecasts appear exactly once",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_120 test: input dates precede every target and match lookback",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_120 test: targets and persistence independently match raw prices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_120 test: every model forecast is finite",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_120 validation: expected number of origin-horizon pairs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_120 validation: all expected forecasts appear exactly once",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_120 validation: input dates precede every target and match lookback",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_120 validation: targets and persistence independently match raw prices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_120 validation: every model forecast is finite",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60_five: supplied recurrent architecture and settings retained",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60_five: input and target shapes match the experiment",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60_five: all one hundred training epochs completed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60_five: scaler sees only its declared fitting rows",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60_five: scaler extrema independently match raw fitting prices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60_five: scaler scale and offset independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60_five: exact chronological training/validation origins are saved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60_five: validation losses are finite",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60_five: checkpoint epoch follows the stated selection rule",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60_five: checkpoint holds the expected finite CPU parameter tensors",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60_five: model and scaler reload checks passed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60_five test: expected number of origin-horizon pairs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60_five test: all expected forecasts appear exactly once",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60_five test: input dates precede every target and match lookback",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60_five test: targets and persistence independently match raw prices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60_five test: every model forecast is finite",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60_five validation: expected number of origin-horizon pairs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60_five validation: all expected forecasts appear exactly once",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60_five validation: input dates precede every target and match lookback",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60_five validation: targets and persistence independently match raw prices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60_five validation: every model forecast is finite",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60_five: supplied recurrent architecture and settings retained",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60_five: input and target shapes match the experiment",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60_five: all one hundred training epochs completed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60_five: scaler sees only its declared fitting rows",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60_five: scaler extrema independently match raw fitting prices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60_five: scaler scale and offset independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60_five: exact chronological training/validation origins are saved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60_five: validation losses are finite",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60_five: checkpoint epoch follows the stated selection rule",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60_five: checkpoint holds the expected finite CPU parameter tensors",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60_five: model and scaler reload checks passed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60_five test: expected number of origin-horizon pairs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60_five test: all expected forecasts appear exactly once",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60_five test: input dates precede every target and match lookback",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60_five test: targets and persistence independently match raw prices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60_five test: every model forecast is finite",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60_five validation: expected number of origin-horizon pairs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60_five validation: all expected forecasts appear exactly once",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60_five validation: input dates precede every target and match lookback",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60_five validation: targets and persistence independently match raw prices",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60_five validation: every model forecast is finite",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Problem 1 reports both recurrent models",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Problem 1 RNN: dollar errors independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Problem 1 LSTM: dollar errors independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Problem 2 reports all eight lookback experiments",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Lookback selection excludes test results",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_10 validation: dollar errors independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_10 test: dollar errors independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_30 validation: dollar errors independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_30 test: dollar errors independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60 validation: dollar errors independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60 test: dollar errors independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_120 validation: dollar errors independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_120 test: dollar errors independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_10 validation: dollar errors independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_10 test: dollar errors independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_30 validation: dollar errors independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_30 test: dollar errors independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60 validation: dollar errors independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60 test: dollar errors independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_120 validation: dollar errors independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_120 test: dollar errors independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "RNN: selected lookback is the validation minimum",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "LSTM: selected lookback is the validation minimum",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Both models report direct five-step results",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60_five validation: dollar errors independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_rnn_60_five test: dollar errors independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60_five validation: dollar errors independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_lstm_60_five test: dollar errors independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Five-step errors cover all horizons for both models",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "RNN horizon 1: dollar errors independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "RNN horizon 2: dollar errors independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "RNN horizon 3: dollar errors independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "RNN horizon 4: dollar errors independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "RNN horizon 5: dollar errors independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "LSTM horizon 1: dollar errors independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "LSTM horizon 2: dollar errors independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "LSTM horizon 3: dollar errors independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "LSTM horizon 4: dollar errors independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "LSTM horizon 5: dollar errors independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NMT retains all supplied main-run settings",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NMT archive is the unchanged starter snapshot",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NMT provenance identifies the supplied source notebook",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NMT uses the entire original retained corpus",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NMT split manifests reproduce the source's two seeded shuffles",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Normalised English inputs never cross NMT splits",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "NMT pair and group counts match their manifests",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "The same five examples use the starter's pre-training selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "All five English inputs and references match held-out pairs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 1000: unchanged settings are stored with the model",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 1000: the one-layer encoder-decoder dimensions are unchanged",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 1000: saved model checksum matches",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 1000: saved parameters are finite, portable and correctly sized",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 1000: all ten epoch histories agree",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 1000: epoch timings and losses are finite",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 1000: epoch selection uses minimum validation loss",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 1000 english: vocabulary is fitted only to training counts",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 1000 english train: unknown counts and percentages independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 1000 english validation: unknown counts and percentages independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 1000 english test: unknown counts and percentages independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 1000 spanish: vocabulary is fitted only to training counts",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 1000 spanish train: unknown counts and percentages independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 1000 spanish validation: unknown counts and percentages independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 1000 spanish test: unknown counts and percentages independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 1000: accuracy denominators exclude padding and include EOS exactly once",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 1000: all five translations use identical held-out inputs and references",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 1000: generated result and unknown-source fields are complete",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 1000: a fresh model reproduces all five generated translations",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 3000: unchanged settings are stored with the model",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 3000: the one-layer encoder-decoder dimensions are unchanged",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 3000: saved model checksum matches",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 3000: saved parameters are finite, portable and correctly sized",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 3000: all ten epoch histories agree",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 3000: epoch timings and losses are finite",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 3000: epoch selection uses minimum validation loss",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 3000 english: vocabulary is fitted only to training counts",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 3000 english train: unknown counts and percentages independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 3000 english validation: unknown counts and percentages independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 3000 english test: unknown counts and percentages independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 3000 spanish: vocabulary is fitted only to training counts",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 3000 spanish train: unknown counts and percentages independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 3000 spanish validation: unknown counts and percentages independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 3000 spanish test: unknown counts and percentages independently recompute",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 3000: accuracy denominators exclude padding and include EOS exactly once",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 3000: all five translations use identical held-out inputs and references",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 3000: generated result and unknown-source fields are complete",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Vocabulary 3000: a fresh model reproduces all five generated translations",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "The larger vocabularies contain the entire smaller vocabularies",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Larger vocabularies cannot increase unknown-token counts",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Required unknown-word and validation-accuracy comparison is complete",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "The side-by-side table contains exactly the same five predictions and references",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "The translation comparison has a written discussion using examples",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "The model manifest includes all fourteen trained checkpoints",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Every checkpoint file exactly matches its recorded byte count and checksum",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "The model transfer bundle has a recorded size and SHA256",
+      "passed": true,
+      "detail": ""
+    }
+  ]
+}

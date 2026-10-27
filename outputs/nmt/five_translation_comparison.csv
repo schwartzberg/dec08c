@@ -1,0 +1,6 @@
+English,Spanish reference,vocabulary 1000,vocabulary 3000,1000 reached EOS,3000 reached EOS
+hi.,hola.,<unk>.,<unk>.,True,True
+i am a good boy.,soy un buen tipo.,soy un buen <unk>.,soy un buen chico.,True,True
+may i turn on the radio?,¿te importa que encienda la radio?,¿puedo <unk> la radio?,¿puedo <unk> la radio?,True,True
+tom is looking forward to seeing mary again.,tom está deseando volver a ver a mary.,tom está <unk> a ver a mary.,tom está deseando volver a mary a ver a mary.,True,True
+"even now, i occasionally think i'd like to see you. not the you that you are today, but the you i remember from the past.","incluso ahora, a veces pienso que me gustaría verte. no como eres hoy, sino como te recuerdo.","si yo te <unk>., te <unk>, te <unk>, te <unk> la verdad. no te <unk>.","a ti te quiero decir, creo que te hayas <unk>, pero no te <unk> mejor que te guste.",True,True
