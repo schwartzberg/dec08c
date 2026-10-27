@@ -5,3 +5,4 @@ __pycache__/
 *.log
 data/nmt/*.zip
 outputs/failed_execution.ipynb
+outputs/execution_in_progress.ipynb
