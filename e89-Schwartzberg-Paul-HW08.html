@@ -7802,11 +7802,12 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Assignment-08:-RNNs,-LSTMs-and-sequence-to-sequence-translation">Assignment 08: RNNs, LSTMs and sequence-to-sequence translation<a class="anchor-link" href="#Assignment-08:-RNNs,-LSTMs-and-sequence-to-sequence-translation">¶</a></h1><p><strong>Schwartzberg, Paul</strong></p>
+<h1>Assignment 08:<br/> RNNs, LSTMs and sequence-to-sequence translation</h1>
+<p><strong>Schwartzberg, Paul</strong></p>
 <p>Problems 1 and 2 use Microsoft opening prices to compare recurrent forecasting models.<br/>
 Problem 3 compares the supplied English-to-Spanish translator with vocabulary budgets of 1,000 and 3,000 tokens.<br/>
 The notebook contains the code, figures, measured results and explanations for all three problems.</p>
-<p>Run the cells in order in a Colab GPU runtime.<br/>
+<p>I ran the cells in order in a Colab GPU runtime.<br/><br/>
 The first run downloads the small data files; running the training cells trains the models again.<br/>
 The stock experiments retain 100 epochs per model, and each translator retains 10 epochs.</p>
 </div>
@@ -7822,7 +7823,7 @@ The stock experiments retain 100 epochs per model, and each translator retains 1
 <h2 id="Setup-and-data-sources">Setup and data sources<a class="anchor-link" href="#Setup-and-data-sources">¶</a></h2><p>I use the supplied PyTorch implementations and save reloadable PyTorch checkpoints.<br/>
 Seed 42 controls the data splits, initial weights and shuffled training batches.<br/>
 Results can still differ between devices and software versions, so I record the environment used for this run.</p>
-<p>The Microsoft data were downloaded from Yahoo Finance on October 27th 2026.<br/>
+<p>The Microsoft data were downloaded from Yahoo Finance on October 27th 2026.<br/><br/>
 I use its daily <code>Open</code> field directly, without applying dividend adjustments.<br/>
 The repository keeps the provider response, the requested periods and file checksums.<br/>
 This notebook retrieves that saved copy when the local files are missing.</p>
@@ -8342,7 +8343,7 @@ Context-only dates: ['2026-09-08']
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h3 id="Model,-windows-and-saved-weights">Model, windows and saved weights<a class="anchor-link" href="#Model,-windows-and-saved-weights">¶</a></h3><p>An input window contains only observations available before its target date.<br/>
-Each recurrent layer passes its sequence to the next layer; the fourth layer's final time step feeds the output layer.<br/>
+Each recurrent layer passes its sequence to the next layer and the fourth layer's final time step feeds the output layer.<br/>
 A one-step model has one output, while the five-step model below has five outputs.<br/>
 Hidden states start at zero for each window, as in the supplied notebooks.</p>
 <p>Training minimises mean squared error on scaled prices.<br/>
@@ -8897,7 +8898,7 @@ All Problem 2 models start with fresh weights; none uses the Problem 1 weights f
 Validation chooses the checkpoint and the one-step lookback separately for each model type.<br/>
 The test period is reserved for the final comparison.</p>
 <p>For the one-step experiment, I use lookbacks of 10, 30, 60 and 120 trading observations.<br/>
-All eight runs use the same training target dates after a common 120-observation warm-up, and the same validation and test target dates.<br/>
+All eight runs use the same training target dates after a common 120-observation warm-up, <br/>and the same validation and test target dates.<br/>
 This keeps differences in the number of training examples out of the lookback comparison.<br/>
 A validation input may contain earlier training observations, because those observations were already known before its target date.</p>
 </div>
@@ -9736,7 +9737,7 @@ Its test RMSE is <strong>$19.44</strong>; it does not beat persistence (<strong>
 <h3 id="Predict-five-future-opening-prices-from-a-(60,-1)-input">Predict five future opening prices from a <code>(60, 1)</code> input<a class="anchor-link" href="#Predict-five-future-opening-prices-from-a-(60,-1)-input">¶</a></h3><p>The next experiment fixes the input at 60 past trading observations and changes the target to a vector of five future opening prices.<br/>
 The output layer now has five units, so one forward pass predicts all five prices directly.<br/>
 A later predicted price is not fed back as an input.</p>
-<p>All five targets must lie within the same training, validation or test period.<br/>
+<p>All five targets must lie within the same training, validation or test period.<br/><br/>
 I drop examples whose targets would cross a boundary.<br/>
 Past inputs can still include observations from an earlier period.<br/>
 Five steps means five trading observations, which can span more than five calendar days.<br/>
@@ -11511,12 +11512,26 @@ These five fixed examples illustrate particular successes and errors; they do no
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Sources">Sources<a class="anchor-link" href="#Sources">¶</a></h2><p>The assignment, lecture slides and supplied RNN, LSTM and <code>3_NMT.ipynb</code> notebooks guided these solutions.<br/>
+<h2 id="Sources">Sources<a class="anchor-link" href="#Sources">¶</a></h2><p>The assignment, lecture slides and supplied RNN, LSTM and <code>3_NMT.ipynb</code> notebooks guided these solutions for me.<br/><br/>
 The stock-price snapshot comes from <a href="https://finance.yahoo.com/quote/MSFT/history/">Yahoo Finance</a>.<br/>
 The parallel sentences come from <a href="https://www.manythings.org/anki/">Tatoeba through ManyThings</a>, using the archive and attribution recorded in Problem 3.<br/>
 <a href="https://docs.pytorch.org/docs/stable/nn.html#recurrent-layers">PyTorch's RNN and LSTM documentation</a> describes the recurrent layers used here.<br/>
 <a href="https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html">MinMaxScaler</a> describes the fitted price transformation.<br/>
 The <a href="https://nasdaqtrader.com/Trader.aspx?id=Calendar">Nasdaq trading calendar</a> lists the September 7th market holiday.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=4884fe09-d478-4017-b181-e44085debbaf">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>
